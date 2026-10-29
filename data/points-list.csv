@@ -1,0 +1,28 @@
+board,port,device,rail,port_fuse,ptc,suppression,notes
+Bunny 1,1,Flipper left (FL-11629 power winding),24 V,2.5 A SB,RUEF160,1N4007 (band on right lug),"+24 V right lug, Bunny middle lug, hold disconnected; fall-off 10 %"
+Bunny 1,2,Sling left,24 V,2.5 A SB,RUEF160,1N4007,
+Bunny 1,3,Flipper right (FL-11629 power winding),24 V,2.5 A SB,RUEF160,1N4007 (band on right lug),as flipper left
+Bunny 1,4,Sling right,24 V,2.5 A SB,RUEF160,1N4007,
+Bunny 1,5,Bumper middle left (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 8 Bumper Left + 10 Bumper Middle Left
+Bunny 1,6,Bumper middle centre (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 8 Bumper Center + 10 Bumper Middle Center
+Bunny 1,7,Bumper middle right (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 8 Bumper Right + 10 Bumper Middle Right
+Bunny 1,8,Knocker (Data East/Sega),24 V,2.5 A SB,none yet,1N4007,DOF Mono:Feedback
+Bunny 1,9,"Shaker (Stern Spike kit, PinSound)",12 V via 7 V buck,,,La Nettoyeuse,
+Bunny 1,10,Coin right LED,12 V,,,,
+Bunny 1,11,Repeating (fire-alarm) bell,12 V,,,La Nettoyeuse,
+Bunny 1,12,Beacons (pair),12 V,,,none needed,
+Bunny 1,13,Topper blower (12 V truck fan),12 V,,,La Nettoyeuse,
+Bunny 1,14,Coin left LED,12 V,,,,
+Bunny 1,15,DTG strobes,12 V,,,,
+Bunny 1,16,Start button LED,12 V,,,,
+Bunny 2,1,Shell bell small (3 in),24 V,2.5 A SB,none yet,1N4007,
+Bunny 2,2,Chime small,24 V,2.5 A SB,none yet,1N4007,
+Bunny 2,3,Chime medium,24 V,2.5 A SB,none yet,1N4007,
+Bunny 2,4,Chime large,24 V,2.5 A SB,none yet,1N4007,
+Bunny 2,5,Shell bell large (4 in),24 V,2.5 A SB,none yet,1N4007,
+Bunny 2,6,Bumper rear left (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Left
+Bunny 2,7,Bumper rear centre (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Center + 8 Bumper Back
+Bunny 2,8,Bumper rear right (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Right
+Bunny 2,9,Gear motor (VW),12 V,5 A SB,,La Nettoyeuse,
+Bunny 2,10,Gear motor 2 (planned),12 V,5 A SB,,La Nettoyeuse,planned
+Bunny 2,11-16,Spare,,,,,

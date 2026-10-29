@@ -1,0 +1,24 @@
+# Dashboard card: live current on the 24 V mechanical rail (repeat per rail).
+# Entity IDs follow the HA device name/area; check yours in Developer tools > States.
+type: vertical-stack
+cards:
+  - type: history-graph
+    title: VPin 24V Mechanical Rail - Current
+    hours_to_show: 0.0167          # last 60 seconds
+    entities:
+      - entity: sensor.esp32_virtual_pinball_vpin_24v_mechanical_rail_current_fast_raw
+        name: Fast Raw (Inrush)
+      - entity: sensor.esp32_virtual_pinball_vpin_24v_mechanical_rail_current_smoothed_sustained
+        name: Smoothed Sustained
+  - type: entities
+    entities:
+      - entity: sensor.esp32_virtual_pinball_vpin_24v_mechanical_rail_current_fast_raw
+        name: Fast Raw (Inrush)
+      - entity: sensor.esp32_virtual_pinball_vpin_24v_mechanical_rail_current_smoothed_sustained
+        name: Smoothed Sustained
+      - entity: sensor.esp32_virtual_pinball_vpin_24v_mechanical_rail_peak_current_inrush
+        name: Peak Current
+      - entity: button.esp32_virtual_pinball_zero_current_baseline_24v_mechanical_rail
+        name: Zero Current Baseline
+      - entity: button.esp32_virtual_pinball_reset_peak_current_24v_mechanical_rail
+        name: Reset Peak Current
