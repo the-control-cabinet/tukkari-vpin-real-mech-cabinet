@@ -7,7 +7,7 @@
 ## Playfield Toys, Coils, and Protection Details
 
 ### Pop bumpers (AE-23-800)
-- **Assembly ([video](https://www.youtube.com/watch?v=rJyJR4AEaiQ)):** the Bakelite insulating piece sits on the **other side** of the metal bracket from where the video shows it. The video's coil wiring predates the diode: use the wiring below.  
+- **Assembly ([video](https://www.youtube.com/watch?v=rJyJR4AEaiQ)):** the video's coil wiring predates the diode: use the wiring below. **Fibre ("Bakelite") yoke:** fitted on the **other side** of the metal yoke from the factory order (see below).  
 - Coil: Williams AE-23-800 style.  
 - Positive path: 24 V terminal block → RUEF160 PTC → coil positive pin.  
 - Return: coil negative pin → Bunny port.  
@@ -94,6 +94,14 @@ Lift diode legs, zero meter, measure all three pairs both ways. Confirm middle i
 ---
 
 ## Pop Bumpers
+
+### Fibre yoke orientation (why this cabinet differs from the factory)
+
+The plunger drives a two-part yoke on the ring's two rods: a **metal** yoke and a **fibre** (phenolic, "Bakelite") yoke. The spring returns the assembly until the yoke stops against the bracket's upright.
+
+- **Factory order (Williams/Bally), from the playfield side:** washer, metal yoke, fibre yoke, locknut, so the fibre faces the coil and the metal yoke takes the return impact. Reasons: on games with a **scoring switch**, the yoke's edge closes its leaf on the pull stroke, and the fibre insulates it; the stiffer metal takes the stop. Cost: a **metal-on-metal** return on every shot (noisier, and the usual explanation for broken metal yokes on old machines). Restorers do it both ways and report both working; Data East examples differ again.
+- **This cabinet:** the bumper is triggered by its **skirt switch** wired to the controller; there is **no yoke-operated scoring switch**, so the factory reason doesn't apply. With the fibre yoke facing the bracket upright, the return lands on **fibre**: quieter, gentler on the metal yoke and bracket. The pull stroke needs no cushioning (the spring ends the travel).
+- **Checks when fitting it this way:** ring height at rest (just above the ball's centre line) and a clean full stroke without bottoming or binding (the stack shifts by the fibre's thickness); keep the washer; the nuts now bear on metal (still don't over-tighten).
 
 ### Coil
 AE-23-800 style.  

@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.5.1] - 2026-11-11
+- Doc 04: fibre yoke orientation: the factory order and its reasons (scoring-switch insulation, metal stop), the metal-on-metal return it costs, and why this cabinet fits it the other way (skirt-switch triggered, cushioned return), with the checks. Video correction reworded to match.
+
 ## [2.5.0] - 2026-11-11
 - Videos: the Real-Mech pop bumper assembly guide added, with two corrections (coil wiring shown predates the diode; Bakelite piece on the other side of the bracket).
 - Doc 04: pop bumper assembly note. Doc 01: branch fusing for thinner wire (addendum to the inline fuses video).
