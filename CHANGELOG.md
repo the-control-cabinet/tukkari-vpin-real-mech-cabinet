@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.5.0] - 2026-11-11
+- Videos: the Real-Mech pop bumper assembly guide added, with two corrections (coil wiring shown predates the diode; Bakelite piece on the other side of the bracket).
+- Doc 04: pop bumper assembly note. Doc 01: branch fusing for thinner wire (addendum to the inline fuses video).
+
 ## 2026-10-29
 - Diagram PDFs: co-author Martafix's email address redacted (text removed, not just covered), PDF metadata cleared, previews regenerated. Credit to Martafix kept. Repository history squashed so earlier versions no longer contain it.
 

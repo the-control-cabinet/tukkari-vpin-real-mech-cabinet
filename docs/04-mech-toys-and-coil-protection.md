@@ -7,6 +7,7 @@
 ## Playfield Toys, Coils, and Protection Details
 
 ### Pop bumpers (AE-23-800)
+- **Assembly ([video](https://www.youtube.com/watch?v=rJyJR4AEaiQ)):** the Bakelite insulating piece sits on the **other side** of the metal bracket from where the video shows it. The video's coil wiring predates the diode: use the wiring below.  
 - Coil: Williams AE-23-800 style.  
 - Positive path: 24 V terminal block → RUEF160 PTC → coil positive pin.  
 - Return: coil negative pin → Bunny port.  

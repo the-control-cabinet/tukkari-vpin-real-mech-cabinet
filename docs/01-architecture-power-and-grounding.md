@@ -68,6 +68,9 @@ Source: DC Power Supply diagram v1.6 and 12V & 24V Connections diagram.
 | 24 V mech | LRS-600-24 | 25 A | Coils, gear motor, chimes, shell bells. Inline fuse. |
 | 24 V audio | LRS-350-24 | 14.6 A | Three amps (XY-S220H audio + two XY-S100H SSF). No DC fuse (see the [safety](10-safety.md) notes). |
 
+### Branch fusing when the wire gets thinner
+A fuse protects the **wire after it**, so it must be sized for the **thinnest** wire it feeds. Where a rail **branches** into thinner wire (a higher AWG number), either **fuse the branch** at the point where it leaves the thicker run, sized for that wire, or size the upstream fuse for the thinnest wire anywhere downstream (usually far too low for the rail). Rough guide for short low-voltage chassis runs: **22 AWG ≈ 3 A · 20 AWG ≈ 5 A · 18 AWG ≈ 7.5 A · 16 AWG ≈ 10 A** (always check the wire's own rating and fuse at or below it). The rail fuses above protect the backhaul; tree branches in thinner wire need their own. (Addendum to the [inline fuses video](https://www.youtube.com/watch?v=xdAt1k0HEi0).)
+
 ### PSU terminal strategy (from the power and wiring design)
 Mean Well doesn't publish a per-terminal current limit for the LRS series. Its wire table is the guide: 14 AWG 10-16 A, 12 AWG 16-25 A, 10 AWG 25-32 A. The three +V and three -V screw terminals are paralleled internally, so load is spread across them.
 
