@@ -71,6 +71,20 @@ Source: DC Power Supply diagram v1.6 and 12V & 24V Connections diagram.
 ### Branch fusing when the wire gets thinner
 A fuse protects the **wire after it**, so it must be sized for the **thinnest** wire it feeds. Where a rail **branches** into thinner wire (a higher AWG number), either **fuse the branch** at the point where it leaves the thicker run, sized for that wire, or size the upstream fuse for the thinnest wire anywhere downstream (usually far too low for the rail). Rough guide for short low-voltage chassis runs: **22 AWG ≈ 3 A · 20 AWG ≈ 5 A · 18 AWG ≈ 7.5 A · 16 AWG ≈ 10 A** (always check the wire's own rating and fuse at or below it). The rail fuses above protect the backhaul; tree branches in thinner wire need their own. (Addendum to the [inline fuses video](https://www.youtube.com/watch?v=xdAt1k0HEi0).)
 
+#### The 24 V toy legs: a known gap and the protection layers (12 Nov 2026)
+Prompted by a viewer comment on the inline fuses video.
+- **Gap:** the +24 V legs from the mech terminal block to each toy are **not yet individually fused**. A leg chafing to the cabinet or ground bypasses the coil and the Bunny, and only the 30 A backhaul fuse would limit it, far above a 20-22 AWG wire's rating. **Planned:** a fused terminal block, each leg fused at its origin for its thinnest wire (22 AWG ~3 A, 20 AWG ~5 A, 18 AWG ~7.5 A).
+- **What each layer protects:**
+
+| Layer | Protects | Doesn't protect |
+|---|---|---|
+| 30 A backhaul fuse | The main feed cable from the PSU | Thin toy legs |
+| Bunny 8 A fuse | The switched-ground path (coil + MOSFET current) | A +24 V leg shorting to ground upstream of the coil |
+| Per-coil 2.5 A slow-blow + RUEF160 | A coil left on (failed MOSFET, or a frontend exiting with a DOF output on: ~5.7 A continuous) | Wiring faults before the coil |
+| DudesCab maximum on-time per output (software, first line) | Stuck-on outputs: ~1-2 s for pulse-only toys; 30 s already on the flippers | Hardware failures |
+
+- **DC LC filter on the 24 V mech rail:** only if symptoms appear (controller resets, USB drops, LED glitches, audio pops, noisy rail-current readings). The four-rail design already separates coils from logic, LEDs and audio, and the mech rail is a 600 W (25 A) supply.
+
 ### PSU terminal strategy (from the power and wiring design)
 Mean Well doesn't publish a per-terminal current limit for the LRS series. Its wire table is the guide: 14 AWG 10-16 A, 12 AWG 16-25 A, 10 AWG 25-32 A. The three +V and three -V screw terminals are paralleled internally, so load is spread across them.
 

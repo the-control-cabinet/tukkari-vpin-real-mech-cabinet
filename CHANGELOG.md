@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.5.2] - 2026-11-16
+- Doc 01: the 24 V toy legs: the known unfused-leg gap and the planned fused terminal block; what each protection layer covers (backhaul fuse, Bunny fuse, per-coil slow-blow + RUEF160, DudesCab maximum on-time); DC LC filter only if symptoms appear. From a viewer comment on the inline fuses video.
+
 ## [2.5.1] - 2026-11-11
 - Doc 04: fibre yoke orientation: the factory order and its reasons (scoring-switch insulation, metal stop), the metal-on-metal return it costs, and why this cabinet fits it the other way (skirt-switch triggered, cushioned return), with the checks. Video correction reworded to match.
 
