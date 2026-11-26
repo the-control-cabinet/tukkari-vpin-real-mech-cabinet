@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.6.0] - 2026-11-26
+- Interior layout drawings Rev A: eight sheets (cover and component schedule, floor plan, level 2 with the under-flipper-board inset, left, right, rear and front interiors, backbox rear interior), coded and keyed by category, not to scale. PDF, sheet PNGs and HTML source in `diagrams/interior-layout-rev-a/`.
+- Doc 12: interior layout section with previews and the Stage 2 plan (3rd level, under-cab, wiring-routing set).
+- README: interior layout section, roadmap (Stage 2 drawings, PC build documentation), still-to-add, repository map.
+
 ## [2.5.2] - 2026-11-16
 - README §3: the unfused 24 V toy legs flagged alongside the 5 V leg, linking to doc 01.
 - Doc 01: the 24 V toy legs: the known unfused-leg gap and the planned fused terminal block; what each protection layer covers (backhaul fuse, Bunny fuse, per-coil slow-blow + RUEF160, DudesCab maximum on-time); DC LC filter only if symptoms appear. From a viewer comment on the inline fuses video.
