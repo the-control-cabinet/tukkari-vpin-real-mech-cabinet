@@ -6,7 +6,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-the--control--cabinet-24292f?logo=github)](https://github.com/the-control-cabinet)
 ![Control](https://img.shields.io/badge/Control-Dude's%20Cab%20%2B%20DOF-orange)
 ![Instrumentation](https://img.shields.io/badge/Monitoring-ESPHome%20%2B%20Home%20Assistant-41BDF5?logo=homeassistant)
-![Status](https://img.shields.io/badge/Status-Running%20on%20laptop%20%E2%80%A2%20PC%20pending-yellow)
+![Status](https://img.shields.io/badge/Status-Dedicated%20PC%20built%20%E2%80%A2%20software%20set--up%20next-yellow)
 
 > **The short version**
 > - **Control:** VPX tables send events through **DOF** to a **Dude's Cab** controller. **Bunny** boards switch the grounds of the 12 V and 24 V toys; **Donny** boards drive the ARGB data; **Voltboards** distribute fused 5 V.
@@ -17,7 +17,7 @@
 >   - per-port slow-blow fuses
 >   - flyback diodes
 > - **Instrumentation:** an ESP32 with **four clamp-on Hall sensors** reads every rail in Home Assistant. It captures **≈6 A pull-in** per coil, **15-30 A spikes** on the 24 V rail when coils fire, and confirms Dude's Cab's PWM hold works as intended: in a 2 % test the held flipper drew only **≈0.1 A**.
-> - **Status:** proven end to end on a laptop; the dedicated PC, the screens (including a projector fed by a Pi-based **internal gameplay camera**) and the full DOF write-up are next.
+> - **Status:** proven end to end on a laptop; the **dedicated PC is built** (RTX 5080, [doc 13](docs/13-pc-build.md), Nov 2026); the cab software set-up, the screens (including a projector fed by a Pi-based **internal gameplay camera**) and the full DOF write-up are next. Interior layout drawings Rev A are done ([below](#interior-layout-drawings)).
 
 **Portfolio position:** a working electromechanical control system. It has the same disciplines as a BMS panel: power distribution, protection coordination, an I/O schedule, field-device commissioning and instrumentation.
 
@@ -190,7 +190,7 @@ Detail: [03 · Lighting and HD matrix](docs/03-lighting-and-hd-matrix.md)
 - **Slings, Data East knocker, three-chime unit, shell bells:** +24 V to one side, Bunny to the other, diode across.
 - **12 V toys:** **Stern Spike shaker kit by PinSound** (through a **7 V step-down**, kept; DOF intensity varies per table), topper blower (a 12 V **truck fan**), beacon pair (straight 12 V; no filter needed), repeating fire-alarm bell, DTG strobes, and a **VW gear motor** (the standard model recommended in the Pinscape guide) on a single PWM port, with a second one planned. DOF sets the intensity in real time, with the Configurator Max Value as the ceiling; an earlier "three ports for H/M/L" approach was superseded. Upper right covers about 80 % of gear tables; middle left is optional for the rest.
 - **La Nettoyeuse** (Arnoz motor/noise filter) on **4** devices: shaker, repeating bell, topper blower and gear motor, with a 5th for gear motor 2. **None on the solenoid coils** (bumpers, slings, flippers, knocker, chimes, shell bells), which use a 1N4007 flyback only.
-- **Planned bumper flash:** 470 Ω 1 W + 12 V LED, with an optional 100-220 µF, in parallel at the coil lugs *after* the PTC, so a stuck-coil trip also kills the LED.
+- **Bumper flash (fitted, [Pop Bumper Part 2 video](https://www.youtube.com/watch?v=C6_70nraSic)):** a bulb and series resistor in parallel at the coil lugs *after* the PTC, so the bulb flashes with each strike and a stuck-coil trip also kills it. ⏳ The replacement bulbs turned out to be **6.3 V AC** types; whether the fitted resistor (already reduced for the previous bulb) suits them is still to check.
 
 ### Protection: four layers
 
@@ -365,12 +365,14 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 - [ ] Confirm the **ESP32 pins** (5 V clamp; DS18B20 location) and commit the live YAML.
 - [ ] **DOF section:** mappings, custom toys and configs.
 - [ ] Record the software and firmware **versions**.
-- [ ] Bumper LED flash circuits (in parallel, after the PTC).
-- [ ] **Dedicated PC + screens**, moving to PinUp Popper Baller.
+- [x] Bumper flash circuits fitted (in parallel, after the PTC).
+- [ ] Check the 6.3 V AC bulbs against the series resistor (value, wattage, supply).
+- [x] **Dedicated PC built** (26 Nov, RTX 5080; [doc 13](docs/13-pc-build.md)). - [ ] Screens and cab software, moving to PinUp Popper Baller.
 - [ ] **Internal gameplay camera:** Pi + camera to the projector.
 - [x] **Interior layout drawings Rev A** (8 sheets, 26 Nov).
 - [ ] **Interior layout drawings Stage 2:** 3rd level (playfield ARGB strips), under-cab level (under-cab strips), and a wiring-routing set (routes, gauge, colour by circuit type).
-- [ ] **PC build documentation:** BOM, build steps and videos.
+- [ ] **PC build documentation:** BOM and build steps into [doc 13](docs/13-pc-build.md) (video done).
+- [ ] **Videos:** 2nd gear motor, "Double Bass" SSF, new HD matrix mount; then the MM topper install, DudesCab nudging, cab software, HA current-clamp monitoring.
 - [ ] Optional: HA table-aware lighting (MQTT from PinUp scripts + Hue colour extraction).
 
 ---
@@ -405,7 +407,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 | Software and firmware versions | [doc 06](docs/06-software-dof-and-configuration.md) |
 | Donny ports 1-5 order check; 5 V leg wire gauge; 12 V port fuse ratings | [doc 02](docs/02-control-boards-and-io.md), [points list](data/points-list.csv) |
 | Notes from the YouTube videos | Folded into the relevant docs |
-| **PC build:** BOM, build notes and videos | `hardware/` + a new doc |
+| **PC build:** BOM, build steps and settings (video done) | [doc 13](docs/13-pc-build.md) |
 | Interior layout drawings Stage 2 (3rd level, under-cab, wiring routing) | `diagrams/` + [doc 12](docs/12-diagrams.md) |
 
 ## Photo gallery
@@ -446,6 +448,12 @@ Full set with descriptions: [doc 12 · Diagrams](docs/12-diagrams.md). Click a p
 - Cabinet tour: [Part 1](https://www.youtube.com/watch?v=klSNuN602sY) · [Part 2](https://www.youtube.com/watch?v=AOLksZjaci8) · [Part 3](https://www.youtube.com/watch?v=pzLITTsYfg4)
 - [Medieval Madness topper](https://www.youtube.com/watch?v=NNeiCwCUsZ4)
 - [Real-Mech add-on install, Part 5](https://www.youtube.com/watch?v=k3RY8v4qDzQ)
+- HD LED matrix: [Part 1](https://www.youtube.com/watch?v=-o0FjaZnpGI) · [Part 2](https://www.youtube.com/watch?v=0CcJNl-t4T8) · [Part 3](https://www.youtube.com/watch?v=h9ek9EePRaY)
+- Real-Mech pop bumper assembly guide: [long version](https://www.youtube.com/watch?v=rJyJR4AEaiQ) · [Part 2: bumper flash bulbs](https://www.youtube.com/watch?v=C6_70nraSic)
+- [I finally built the PC for my Tukkari Virtual Pinball cabinet!](https://www.youtube.com/watch?v=49bwwH7yKdk)
+- Shorts: [Pop bumper correction](https://www.youtube.com/shorts/0rA8RSkf7PE) · [Install LEDs in your pop bumpers](https://www.youtube.com/shorts/WHq9BmF19uA) · [Real Mech assembly (short)](https://www.youtube.com/shorts/efrVuufDd_M) · [MM custom topper](https://www.youtube.com/shorts/UcTnN8SDz70) · [MM Pin Gulp](https://www.youtube.com/shorts/XHSpaCP9QCE) · [Coming soon](https://www.youtube.com/shorts/IUJwHqt_WBU)
+
+Coming next: the 2nd gear motor, "Double Bass" SSF and a new HD matrix mount.
 
 What each video contributed: [11 · Videos](docs/11-videos.md)
 
@@ -467,6 +475,7 @@ What each video contributed: [11 · Videos](docs/11-videos.md)
 | [10 Safety](docs/10-safety.md) | Mains, fusing principles, coil protection, polarity, thermal |
 | [11 Videos](docs/11-videos.md) | Channel videos and what they contributed |
 | [12 Diagrams](docs/12-diagrams.md) | All wiring diagrams with previews; interior layout drawings Rev A |
+| [13 PC build](docs/13-pc-build.md) | Requirements (4 screens, 4K 144 Hz playfield, VR later), GPU choice, BOM to come |
 | [Decision log](docs/decision-log.md) · [Test record](docs/test-record.md) | Locked choices; test results |
 | [Parts list](hardware/parts-list.md) ([xlsx](hardware/parts-list.xlsx)) | Every part, with link, notes and installed/planned status |
 | [3D printed parts](hardware/3d-printed-parts.md) | STLs used, with source links |
@@ -481,7 +490,7 @@ What each video contributed: [11 · Videos](docs/11-videos.md)
 ├── data/points-list.csv            ← I/O schedule (draft)
 ├── diagrams/*.pdf + previews/*.png ← wiring diagrams (kebab-case names)
 ├── diagrams/interior-layout-rev-a/ ← interior layout drawings: PDF, sheet PNGs, HTML source
-├── docs/                           ← 01-12, decision log, test record
+├── docs/                           ← 01-13, decision log, test record
 ├── hardware/parts-list.xlsx · .md  ← full parts list (installed / planned)
 ├── hardware/3d-printed-parts.md    ← STLs used, with links
 └── images/                         ← build photos

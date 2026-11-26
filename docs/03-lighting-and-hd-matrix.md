@@ -94,3 +94,5 @@ Dude’s Cab Configurator test modes (RGB, Colours, Laser) produce only short pu
 | Apply changes | **Send Config → Save to Memory**, then regenerate the DOF config |
 | `cabinet.xml` | Not used with an MX Donny |
 
+## Videos
+The HD matrix build is covered in three videos: [Part 1](https://www.youtube.com/watch?v=-o0FjaZnpGI) · [Part 2](https://www.youtube.com/watch?v=0CcJNl-t4T8) (the mount in situ, wiring, Dude's Cab Configurator settings, first tests) · [Part 3](https://www.youtube.com/watch?v=h9ek9EePRaY) (DOF config, custom GIFs in situ, how effective it is). A new and improved mount is the subject of a coming video.

@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.7.0] - 2026-11-26
+- Dedicated PC built: new doc 13 (requirements, RTX 5080 choice over 5070 Ti, VR later; BOM to come); README status, badge and roadmap.
+- Videos: the PC build, the Pop Bumper Assembly Guide Part 2 (bumper flash bulbs) and the HD LED matrix Parts 1-3 added to doc 11 and the README; coming-next list; corrections policy. Doc 03 links the matrix videos.
+- Shorts table (coming soon, pop bumper correction, pop bumper LEDs, real-mech assembly short, Medieval Madness topper and Pin Gulp) in doc 11 and the README.
+- Bumper flash recorded as fitted; open item: check the 6.3 V AC replacement bulbs against the series resistor.
+
 ## [2.6.0] - 2026-11-26
 - Interior layout drawings Rev A: eight sheets (cover and component schedule, floor plan, level 2 with the under-flipper-board inset, left, right, rear and front interiors, backbox rear interior), coded and keyed by category, not to scale. PDF, sheet PNGs and HTML source in `diagrams/interior-layout-rev-a/`.
 - Doc 12: interior layout section with previews and the Stage 2 plan (3rd level, under-cab, wiring-routing set).
