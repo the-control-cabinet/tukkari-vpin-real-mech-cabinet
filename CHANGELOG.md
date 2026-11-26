@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.7.2] - 2026-11-26
+- README: new section 10 "Cab PC" (why, parts and prices, how it's fitted, lessons, open items), like the other build areas; sections 10-16 renumbered 11-17; scope table and architecture diagram updated for the built PC; contents link to the interior layout drawings. Doc 01 roadmap link updated.
+
 ## [2.7.1] - 2026-11-26
 - Doc 13 PC build completed: why (four screens incl. a 4K 144 Hz OLED playfield, VR later), parts with prices (£3,410.24), build decisions and lessons (cooler airflow, standoffs, RAM/SSD slots, GPU bracket re-drill, machine screws for prints, cable cover first), headers and ports (DMD on USB-C), open items.
 - The future topper screen is the projector (shared with the gameplay camera).

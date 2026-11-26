@@ -107,7 +107,7 @@ Runs are short (about 0.75 m), so voltage drop is low. On 5 V, aim to keep the d
 - 5 V: **30 A ANL** (reduced from the original 60 A). It protects the heavy backhaul; the Voltboard port fuses protect the LED branches. ⚠️ The **last leg from the 5 V terminal block to the direct Voltboard is not separately fused**. A 30 A ANL can't protect a lighter wire, so a fuse sized to that leg (or a heavier wire) is on the roadmap.
 - 24 V mech: 30 A inline (per the DC Power Supply diagram v1.6).
 - 12 V: **20 A**. That's correctly below both the 12 AWG feed (about 16-25 A) and the 25 A terminal block.
-- 24 V audio: **none**. Single direct runs from the PSU screw terminals to the three amps, with no terminal block. Fusing was skipped to save the hassle of wiring holders into short single runs. Fitting a fuse per amp feed is on the [roadmap](../README.md#13-roadmap).
+- 24 V audio: **none**. Single direct runs from the PSU screw terminals to the three amps, with no terminal block. Fusing was skipped to save the hassle of wiring holders into short single runs. Fitting a fuse per amp feed is on the [roadmap](../README.md#14-roadmap).
 
 ### Bunny boards
 Two Bunny boards (16 PWM outputs each).  

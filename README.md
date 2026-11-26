@@ -34,14 +34,15 @@
 7. [Instrumentation: ESP32 rail monitoring](#7-instrumentation-esp32-rail-monitoring)
 8. [Audio and SSF](#8-audio-and-ssf)
 9. [Software, DOF and versions](#9-software-dof-and-versions)
-10. [Internal gameplay camera (planned)](#10-internal-gameplay-camera-planned)
-11. [Issues dealt with](#11-issues-dealt-with)
-12. [Testing](#12-testing)
-13. [Roadmap](#13-roadmap)
-14. [Skills demonstrated](#14-skills-demonstrated-bms--building-automation)
-[Still to add](#still-to-add-to-this-repo) · [Photo gallery](#photo-gallery) · [Wiring diagrams](#wiring-diagrams)
-15. [Videos](#15-videos)
-16. [Documents, diagrams and repository map](#16-documents-diagrams-and-repository-map)
+10. [Cab PC](#10-cab-pc)
+11. [Internal gameplay camera (planned)](#11-internal-gameplay-camera-planned)
+12. [Issues dealt with](#12-issues-dealt-with)
+13. [Testing](#13-testing)
+14. [Roadmap](#14-roadmap)
+15. [Skills demonstrated](#15-skills-demonstrated-bms--building-automation)
+[Still to add](#still-to-add-to-this-repo) · [Photo gallery](#photo-gallery) · [Interior layout drawings](#interior-layout-drawings) · [Wiring diagrams](#wiring-diagrams)
+16. [Videos](#16-videos)
+17. [Documents, diagrams and repository map](#17-documents-diagrams-and-repository-map)
 
 ---
 
@@ -51,13 +52,14 @@
 
 | In scope | Out of scope (for now) |
 |---|---|
-| Multi-rail DC power (5 V ARGB, 12 V aux, 24 V mech, 24 V audio), terminal-block ratings, backhauls, fusing | Final dedicated PC and screens |
+| Multi-rail DC power (5 V ARGB, 12 V aux, 24 V mech, 24 V audio), terminal-block ratings, backhauls, fusing | Screen commissioning (PC built Nov 2026) |
 | Bunny switched-ground and Donny ARGB allocation and wiring | Full PinUp Popper Baller deployment |
 | A six-panel CSD HD matrix (1,536 pixels): orientation, data snake, paired chaining, power injection | Cosmetic work beyond the backglass blackout |
 | Real toys: AE-23-800 bumpers, FL-11629 flippers, slings, knocker, chimes, shell bells, shaker, blower, VW gear motor, beacons | |
 | Layered coil protection | |
 | ESP32 rail-current monitoring in Home Assistant | |
 | DOF + Dude's Cab + VPX, proven on a laptop | |
+| Dedicated cab PC (RTX 5080, 4 screens) | |
 | Chassis earthing through powder-coated metal | |
 
 ---
@@ -66,7 +68,7 @@
 
 ```mermaid
 flowchart TB
-    subgraph PC["Laptop (now) / dedicated PC (planned)"]
+    subgraph PC["Cab PC: RTX 5080 + Ryzen 7 9850X3D (laptop until Nov 2026)"]
         VPX["VPX + VPinMAME + B2S"] --> DOF["DirectOutput Framework"]
     end
     DOF -->|USB| DC["Dude's Cab controller"]
@@ -294,7 +296,36 @@ Three amps on the dedicated 24 V audio rail: backbox speakers plus cabinet woofe
 
 ---
 
-## 10. Internal gameplay camera (planned)
+## 10. Cab PC
+
+A dedicated PC replaces the laptop that proved the cabinet ([video](https://www.youtube.com/watch?v=49bwwH7yKdk)). It drives **four screens**: a **4K 144 Hz OLED playfield**, the backglass, the 15" DMD and the topper **projector** (which also shows the internal gameplay camera). The **RTX 5080** was chosen over the RTX 5070 Ti for headroom at the highest settings and **VR pinball on a Quest 3** later.
+
+| Part | Model | Price |
+|---|---|---|
+| GPU | Gigabyte RTX 5080 Gaming 16G | £1,575.00 |
+| CPU | AMD Ryzen 7 9850X3D | £327.99 |
+| Motherboard | Gigabyte X870 Aorus Elite WiFi7 | £239.98 |
+| RAM | Corsair Vengeance 32 GB DDR5-6000 CL30 | £529.99 |
+| SSD | Samsung 990 Pro 4 TB | £605.94 |
+| PSU | Corsair RM850x | £104.99 |
+| CPU cooler | Thermalright Peerless Assassin 120 SE ARGB | £26.35 |
+| **Total** | | **£3,410.24** |
+
+**How it's fitted:**
+- The motherboard lies **flat on a Tukkari plate**, screwed into Tukkari's pre-drilled holes; the second bumper row and the playfield hinge clear it.
+- **Cooling** runs front to back along the cab: cooler fans **front + middle** (a rear fan fouled the connector inlet). The SYS_FAN headers run the cab inlet and exhaust fans.
+- The **under-cab button** is the power button (F_PANEL); its 12 V bulb runs from a 5 → 12 V step-up, so it lights only when the board is powered.
+- The **DMD** runs from one USB-C port (power and data), so it isn't a GPU output; the GPU drives the playfield (DisplayPort → HDMI), backglass and topper projector.
+
+**Lessons:** the cooler standoffs only fit one way round; fit the cable cover piece before the motherboard; the Tukkari GPU bracket had to be moved and re-drilled for this card; use machine screws and nuts, not wood screws, in 3D prints.
+
+**Open:** machine screws for the prints; GPU port-to-screen plan (and sharing the projector with the camera's Pi); possible GPU bracket redesign; wiring tidy; commissioning (Part 2 video), moving to PinUp Popper Baller.
+
+Detail: [13 · PC build](docs/13-pc-build.md)
+
+---
+
+## 11. Internal gameplay camera (planned)
 
 **Goal:** a live view of the real bumpers and flippers inside the cabinet during play, on a **4th screen: a projector**.
 
@@ -314,7 +345,7 @@ Detail: [08 · Gameplay camera](docs/08-gameplay-camera.md)
 
 ---
 
-## 11. Issues dealt with
+## 12. Issues dealt with
 
 | Issue | Resolution |
 |---|---|
@@ -339,7 +370,7 @@ Full fault-finding notes: [09 · Troubleshooting and fault log](docs/09-troubles
 ## Completed build items
 Mains distribution; terminal blocks; both Bunnies and the Voltboards mounted; all mechs wired and tested; HD matrix; ARGB fans, speaker rings, strips, MX buttons and flashers; fuse labelling; flasher brackets and beacon mounts; plunger button; 12 V LED button bulbs; undercab button LEDs on the PC power-LED circuit; interior LED on the coin-door interlock; backbox screen power; earth braid; amp feeds (three direct runs; no terminal block needed).
 
-## 12. Testing
+## 13. Testing
 
 Highlights:
 - **Coils:** resistance mapping; flipper hold threshold (test: 2 % holds, 1 % drops; setting 10 %); ESP32 current profile (≈6 A inrush, ≈0.1 A held at 2 %); fuse trials (2 A SB under 0.5 s; 2.5 A SB over 30 s); **RUEF250 too slow; RUEF160 under 10 s with no false trips**.
@@ -351,7 +382,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 
 ---
 
-## 13. Roadmap
+## 14. Roadmap
 
 - [ ] ⚠️ **Fuse the 5 V direct-Voltboard leg** (sized to its wire), or upsize the wire.
 - [ ] **Fuse the 24 V audio feeds** (one inline fuse per amp, near the PSU).
@@ -378,7 +409,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 
 ---
 
-## 14. Skills demonstrated (BMS / building automation)
+## 15. Skills demonstrated (BMS / building automation)
 
 | Skill | Evidence |
 |---|---|
@@ -437,7 +468,7 @@ Full set with descriptions: [doc 12 · Diagrams](docs/12-diagrams.md). Click a p
 | [<img src="diagrams/previews/dc-power-supply-v1.6.png" width="260">](diagrams/dc-power-supply-v1.6.pdf)<br>*DC power supply v1.6* | [<img src="diagrams/previews/12v-24v-toys-single-green-connector-version-v1.5.png" width="260">](diagrams/12v-24v-toys-single-green-connector-version-v1.5.pdf)<br>*12 V / 24 V toys v1.5* | [<img src="diagrams/previews/boards-interconnections-dudes-cab-plus-mx-donny-version-v1.2.png" width="260">](diagrams/boards-interconnections-dudes-cab-plus-mx-donny-version-v1.2.pdf)<br>*Board interconnections v1.2* |
 | [<img src="diagrams/previews/220v-ac-and-pc-connections-v1.1.png" width="260">](diagrams/220v-ac-and-pc-connections-v1.1.pdf)<br>*230 V AC and PC v1.1* | [<img src="diagrams/previews/audio-and-ssf-system-v1.2.png" width="260">](diagrams/audio-and-ssf-system-v1.2.pdf)<br>*Audio and SSF v1.2* | [<img src="diagrams/previews/this-mortal-coil-flipper-option-2-v1.1.png" width="260">](diagrams/this-mortal-coil-flipper-option-2-v1.1.pdf)<br>*These Mortal Coils: flipper option 2* |
 
-## 15. Videos
+## 16. Videos
 
 **[The Control Cabinet on YouTube](https://www.youtube.com/channel/UC5Cupmz7vlfcodpCX7k8iuQ)**:
 
@@ -460,7 +491,7 @@ What each video contributed: [11 · Videos](docs/11-videos.md)
 
 ---
 
-## 16. Documents, diagrams and repository map
+## 17. Documents, diagrams and repository map
 
 | Doc | Covers |
 |---|---|
