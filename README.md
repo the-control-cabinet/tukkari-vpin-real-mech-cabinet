@@ -17,7 +17,7 @@
 >   - per-port slow-blow fuses
 >   - flyback diodes
 > - **Instrumentation:** an ESP32 with **four clamp-on Hall sensors** reads every rail in Home Assistant. It captures **≈6 A pull-in** per coil, **15-30 A spikes** on the 24 V rail when coils fire, and confirms Dude's Cab's PWM hold works as intended: in a 2 % test the held flipper drew only **≈0.1 A**.
-> - **Status:** proven end to end on a laptop; the **dedicated PC is built** (RTX 5080, [doc 13](docs/13-pc-build.md), Nov 2026); the cab software set-up, the screens (including a projector fed by a Pi-based **internal gameplay camera**) and the full DOF write-up are next. Interior layout drawings Rev A are done ([below](#interior-layout-drawings)).
+> - **Status:** proven end to end on a laptop; the **dedicated PC is built** (RTX 5080 + Ryzen 7 9850X3D, £3,410; [doc 13](docs/13-pc-build.md), Nov 2026); the cab software set-up, the screens (including a projector fed by a Pi-based **internal gameplay camera**) and the full DOF write-up are next. Interior layout drawings Rev A are done ([below](#interior-layout-drawings)).
 
 **Portfolio position:** a working electromechanical control system. It has the same disciplines as a BMS panel: power distribution, protection coordination, an I/O schedule, field-device commissioning and instrumentation.
 
@@ -371,7 +371,8 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 - [ ] **Internal gameplay camera:** Pi + camera to the projector.
 - [x] **Interior layout drawings Rev A** (8 sheets, 26 Nov).
 - [ ] **Interior layout drawings Stage 2:** 3rd level (playfield ARGB strips), under-cab level (under-cab strips), and a wiring-routing set (routes, gauge, colour by circuit type).
-- [ ] **PC build documentation:** BOM and build steps into [doc 13](docs/13-pc-build.md) (video done).
+- [x] **PC build documentation:** parts, lessons and connections in [doc 13](docs/13-pc-build.md); video done.
+- [ ] **PC finishing:** machine screws for the 3D prints, GPU port-to-screen plan, GPU bracket redesign, wiring tidy, Part 2 commissioning video.
 - [ ] **Videos:** 2nd gear motor, "Double Bass" SSF, new HD matrix mount; then the MM topper install, DudesCab nudging, cab software, HA current-clamp monitoring.
 - [ ] Optional: HA table-aware lighting (MQTT from PinUp scripts + Hue colour extraction).
 
@@ -407,7 +408,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 | Software and firmware versions | [doc 06](docs/06-software-dof-and-configuration.md) |
 | Donny ports 1-5 order check; 5 V leg wire gauge; 12 V port fuse ratings | [doc 02](docs/02-control-boards-and-io.md), [points list](data/points-list.csv) |
 | Notes from the YouTube videos | Folded into the relevant docs |
-| **PC build:** BOM, build steps and settings (video done) | [doc 13](docs/13-pc-build.md) |
+| PC commissioning: BIOS/Windows settings, screen layout, frontend | [doc 13](docs/13-pc-build.md) |
 | Interior layout drawings Stage 2 (3rd level, under-cab, wiring routing) | `diagrams/` + [doc 12](docs/12-diagrams.md) |
 
 ## Photo gallery
@@ -475,7 +476,7 @@ What each video contributed: [11 · Videos](docs/11-videos.md)
 | [10 Safety](docs/10-safety.md) | Mains, fusing principles, coil protection, polarity, thermal |
 | [11 Videos](docs/11-videos.md) | Channel videos and what they contributed |
 | [12 Diagrams](docs/12-diagrams.md) | All wiring diagrams with previews; interior layout drawings Rev A |
-| [13 PC build](docs/13-pc-build.md) | Requirements (4 screens, 4K 144 Hz playfield, VR later), GPU choice, BOM to come |
+| [13 PC build](docs/13-pc-build.md) | Why (4 screens, 4K 144 Hz OLED playfield, VR later), parts and prices, build lessons, connections, open items |
 | [Decision log](docs/decision-log.md) · [Test record](docs/test-record.md) | Locked choices; test results |
 | [Parts list](hardware/parts-list.md) ([xlsx](hardware/parts-list.xlsx)) | Every part, with link, notes and installed/planned status |
 | [3D printed parts](hardware/3d-printed-parts.md) | STLs used, with source links |

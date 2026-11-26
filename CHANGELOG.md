@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.7.1] - 2026-11-26
+- Doc 13 PC build completed: why (four screens incl. a 4K 144 Hz OLED playfield, VR later), parts with prices (£3,410.24), build decisions and lessons (cooler airflow, standoffs, RAM/SSD slots, GPU bracket re-drill, machine screws for prints, cable cover first), headers and ports (DMD on USB-C), open items.
+- The future topper screen is the projector (shared with the gameplay camera).
+- Parts list: new Cab PC section. README: status, roadmap, documents.
+
 ## [2.7.0] - 2026-11-26
 - Dedicated PC built: new doc 13 (requirements, RTX 5080 choice over 5070 Ti, VR later; BOM to come); README status, badge and roadmap.
 - Videos: the PC build, the Pop Bumper Assembly Guide Part 2 (bumper flash bulbs) and the HD LED matrix Parts 1-3 added to doc 11 and the README; coming-next list; corrections policy. Doc 03 links the matrix videos.

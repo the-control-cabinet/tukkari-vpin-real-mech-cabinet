@@ -125,6 +125,21 @@ Status: **Installed** = fitted in the cabinet · **Planned** = to fit or buy.
 | Inline fuse for the 5 V terminal block -> Voltboard wire | 1 |  | The 30 A ANL is larger than this wire can carry, so the wire itself is unprotected. Fit at the terminal-block end, rated below the wire (about 15 A for 14 AWG, 20 A for 12 AWG) | Planned |
 | Inline fuses for 24 V audio amp feeds | 3 |  | One per amp near the PSU | Planned |
 
+## Cab PC (Nov 2026)
+
+| Item | Qty | Product / link | Notes | Status |
+|---|---|---|---|---|
+| GPU | 1 | Gigabyte RTX 5080 Gaming 16G | £1,575.00; chosen over the RTX 5070 Ti (4K 144 Hz playfield, VR later) | Installed |
+| CPU | 1 | AMD Ryzen 7 9850X3D | £327.99 | Installed |
+| Motherboard | 1 | Gigabyte X870 Aorus Elite WiFi7 | £239.98; DMD on its USB-C (power + data) | Installed |
+| RAM | 2 | Corsair Vengeance 16 GB DDR5-6000 CL30 | £529.99 the pair; slots A2/B2 | Installed |
+| SSD | 1 | Samsung 990 Pro 4 TB | £605.94; primary M.2 | Installed |
+| PSU | 1 | Corsair RM850x | £104.99 | Installed |
+| CPU cooler | 1 | Thermalright Peerless Assassin 120 SE ARGB | £26.35; fans front + middle | Installed |
+| Step-up 5 → 12 V | 1 | | Under-cab power button bulb | Installed |
+
+Detail: [doc 13](../docs/13-pc-build.md).
+
 ## Monitoring and planned
 
 | Item | Qty | Product / link | Notes | Status |
