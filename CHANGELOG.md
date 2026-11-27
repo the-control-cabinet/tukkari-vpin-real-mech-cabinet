@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.7.5] - 2026-11-27
+- New wiring diagram: **ARGB LEDs** (the-control-cabinet with Martafix): MX Donny data, Voltboards 1-3 and their fuses, HD matrix feeds, playfield and undercab strips, ARGB fans, MX flashers, speaker rings, MX buttons. PDF + preview in `diagrams/`; added to doc 12 and the README gallery.
+
 ## [2.7.4] - 2026-11-27
 - Gear motor mounts: the 3D-printed MB70.1 Wiper motor mount (MakerWorld 210642, by TryingThingsLikeThis, CC BY-NC; print settings recorded), one per gear motor, added to the parts list, the 3D printed parts list and doc 04.
 

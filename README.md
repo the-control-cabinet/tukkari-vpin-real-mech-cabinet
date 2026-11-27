@@ -468,6 +468,7 @@ Full set with descriptions: [doc 12 · Diagrams](docs/12-diagrams.md). Click a p
 |---|---|---|
 | [<img src="diagrams/previews/dc-power-supply-v1.6.png" width="260">](diagrams/dc-power-supply-v1.6.pdf)<br>*DC power supply v1.6* | [<img src="diagrams/previews/12v-24v-toys-single-green-connector-version-v1.5.png" width="260">](diagrams/12v-24v-toys-single-green-connector-version-v1.5.pdf)<br>*12 V / 24 V toys v1.5* | [<img src="diagrams/previews/boards-interconnections-dudes-cab-plus-mx-donny-version-v1.2.png" width="260">](diagrams/boards-interconnections-dudes-cab-plus-mx-donny-version-v1.2.pdf)<br>*Board interconnections v1.2* |
 | [<img src="diagrams/previews/220v-ac-and-pc-connections-v1.1.png" width="260">](diagrams/220v-ac-and-pc-connections-v1.1.pdf)<br>*230 V AC and PC v1.1* | [<img src="diagrams/previews/audio-and-ssf-system-v1.2.png" width="260">](diagrams/audio-and-ssf-system-v1.2.pdf)<br>*Audio and SSF v1.2* | [<img src="diagrams/previews/this-mortal-coil-flipper-option-2-v1.1.png" width="260">](diagrams/this-mortal-coil-flipper-option-2-v1.1.pdf)<br>*These Mortal Coils: flipper option 2* |
+| [<img src="diagrams/previews/argb-leds.png" width="260">](diagrams/argb-leds.pdf)<br>*ARGB LEDs (new, Nov 2026)* | | |
 
 ## 16. Videos
 
