@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.7.4] - 2026-11-27
+- Gear motor mounts: the 3D-printed MB70.1 Wiper motor mount (MakerWorld 210642, by TryingThingsLikeThis, CC BY-NC; print settings recorded), one per gear motor, added to the parts list, the 3D printed parts list and doc 04.
+
 ## [2.7.3] - 2026-11-27
 - Gear motors: model recorded (Febi front wiper motor for the VW Transporter T3, OE 191955113A / 191955119AX, 12 V, with the listing link); gear motor 2 now installed (middle left, Bunny 2 port 10, own La Nettoyeuse). La Nettoyeuse count 4 → 5. Updated in the README, docs 02 and 04, the decision log, the points list and the parts list.
 - Doc 01: gear motors moved from the 24 V mech rail row to the 12 V row (they were already listed as 12 V everywhere else).

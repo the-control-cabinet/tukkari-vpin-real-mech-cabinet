@@ -186,6 +186,7 @@ Detail: [doc 13](../docs/13-pc-build.md).
 | Voltage buck & step up mount | 1 | [Voltage buck & step up mount  LM2577 DC step-up with LED display 35…](https://www.printables.com/model/662384-lm2577-dc-step-up-with-led-display-35x66mm) |  | Installed |
 | Flasher mount for backbox Arnoz Flash25 Flasher Case Backing | 1 | [Flasher mount for backbox Arnoz Flash25 Flasher Case Backing](https://makerworld.com/en/models/179459-arnoz-flash25-flasher-case-backing?from=search) |  | Installed |
 | HD matrix mount, parallel to glass, incl. 2 strobes | 1 |  |  | Installed |
+| Gear motor mount (MB70.1 Wiper motor mount) | 2 | [MB70.1 Wiper motor mount, MakerWorld 210642](https://makerworld.com/en/models/210642-mb70-1-wiper-motor-mount) | One per gear motor (VW T3 wiper motors). by TryingThingsLikeThis on MakerWorld, CC BY-NC. PLA ~92 g, ~3 h each: 0.2 mm layers, 3 walls, 25 % infill, tree supports (build plate only) | Installed |
 | Arnoz printed parts: button support, plunger, Nettoyeuse holder, button board holder | set | [3D Support Button Color Black](https://shop.arnoz.com/en/3d/80-74-3d-support-button.html) | Buying the plunger from Arnoz includes the push-button microswitch | Installed |
 | Custom topper parts | set |  | Mounts for the 14 additional flashers | Planned |
 

@@ -217,7 +217,7 @@ Additional motors (top-left ~6–9 %, front ~3–6 %) have low ROI for most user
 Medium pitch covers ~85–90 % of tables. Low and High are minorities. Pitch was de-prioritised relative to location.
 
 ### Hardware notes
-Both gear motors are the **Febi front wiper motor for the VW Transporter T3 (1979-92), OE 191955113A / 191955119AX, 12 V** ([eBay listing](https://www.ebay.co.uk/itm/336339742479)), the VW wiper-motor type recommended in the Pinscape build guide. Gear motor 1 sits **upper right** on Bunny 2 port 9; gear motor 2 sits **middle left** on Bunny 2 port 10. Each has its own **La Nettoyeuse**. Positions on the [interior floor plan](../diagrams/interior-layout-rev-a/02-floor-plan.png) (M9, M10).
+Both gear motors are the **Febi front wiper motor for the VW Transporter T3 (1979-92), OE 191955113A / 191955119AX, 12 V** ([eBay listing](https://www.ebay.co.uk/itm/336339742479)), the VW wiper-motor type recommended in the Pinscape build guide. Gear motor 1 sits **upper right** on Bunny 2 port 9; gear motor 2 sits **middle left** on Bunny 2 port 10. Each has its own **La Nettoyeuse**, and each sits in a 3D-printed [MB70.1 Wiper motor mount](https://makerworld.com/en/models/210642-mb70-1-wiper-motor-mount) (by TryingThingsLikeThis on MakerWorld, CC BY-NC). Positions on the [interior floor plan](../diagrams/interior-layout-rev-a/02-floor-plan.png) (M9, M10).
 
 See also: [La Nettoyeuse](04-mech-toys-and-coil-protection.md#la-nettoyeuse), [Bunny boards](02-control-boards-and-io.md).
 
