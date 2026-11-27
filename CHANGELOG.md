@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.7.3] - 2026-11-27
+- Gear motors: model recorded (Febi front wiper motor for the VW Transporter T3, OE 191955113A / 191955119AX, 12 V, with the listing link); gear motor 2 now installed (middle left, Bunny 2 port 10, own La Nettoyeuse). La Nettoyeuse count 4 → 5. Updated in the README, docs 02 and 04, the decision log, the points list and the parts list.
+- Doc 01: gear motors moved from the 24 V mech rail row to the 12 V row (they were already listed as 12 V everywhere else).
+
 ## [2.7.2] - 2026-11-26
 - README: new section 10 "Cab PC" (why, parts and prices, how it's fitted, lessons, open items), like the other build areas; sections 10-16 renumbered 11-17; scope table and architecture diagram updated for the built PC; contents link to the interior layout drawings. Doc 01 roadmap link updated.
 

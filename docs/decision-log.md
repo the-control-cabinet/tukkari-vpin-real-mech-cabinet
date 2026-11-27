@@ -28,7 +28,7 @@
 | DOF white test | Direct .ini permanent ON White | Configurator pulses too short | Used |
 | Backglass blackout | Spray paint rear side | Tint film impractical | Done |
 | Gear motor intensity | Single Bunny PWM port + DOF intensity | Configurator Max Value is ceiling; real-time intensity supported. Earlier 3-port advice superseded | Done |
-| Gear motor location | Primary UR, second ML planned (Bunny 2 port 10) | ~80 % of gear tables are upper-right | Primary done; second planned |
+| Gear motor location | Primary UR, second ML (Bunny 2 port 10) | ~80 % of gear tables are upper-right; the second covers middle-left tables (e.g. Medieval Madness) | Done (both fitted) |
 | SSF mapping | Front=backbox, Surround=rear exciters, Back=front exciters | Standard 7.1 SSF orientation | Done |
 | MX Donny / MX button | Closed — loose playfield LED strip connection blew the MX button board | Not a failed Donny port. Connection fixed, button replaced | Closed |
 | Bunny fall-off | 35 ms / 0 % on pulse toys; 35 ms / **10 %** on flippers, security delay about 60 s | Real-mech protection. 2 % tested (still holds at ≈0.1 A) but never used | Done |

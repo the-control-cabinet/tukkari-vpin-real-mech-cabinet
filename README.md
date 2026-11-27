@@ -1,6 +1,6 @@
 # Tukkari Virtual Pinball Cabinet: Real-Mech Toys, Layered Coil Protection and Rail Instrumentation
 
-**A custom Tukkari **widebody** virtual pinball cabinet that drives real pinball mechanics from software: pop bumpers, slings, flippers, knocker, chimes, shell bells, a shaker, a blower, a gear motor and beacons, plus about 2,400 addressable LEDs, including a 1,536-pixel HD matrix. It runs on four DC rails with layered coil protection, every major decision documented with the numbers behind it, and an ESP32 measuring the current on every rail in Home Assistant.**
+**A custom Tukkari **widebody** virtual pinball cabinet that drives real pinball mechanics from software: pop bumpers, slings, flippers, knocker, chimes, shell bells, a shaker, a blower, two gear motors and beacons, plus about 2,400 addressable LEDs, including a 1,536-pixel HD matrix. It runs on four DC rails with layered coil protection, every major decision documented with the numbers behind it, and an ESP32 measuring the current on every rail in Home Assistant.**
 
 [![YouTube](https://img.shields.io/badge/YouTube-The%20Control%20Cabinet-red?logo=youtube)](https://www.youtube.com/channel/UC5Cupmz7vlfcodpCX7k8iuQ)
 [![Portfolio](https://img.shields.io/badge/Portfolio-the--control--cabinet-24292f?logo=github)](https://github.com/the-control-cabinet)
@@ -55,7 +55,7 @@
 | Multi-rail DC power (5 V ARGB, 12 V aux, 24 V mech, 24 V audio), terminal-block ratings, backhauls, fusing | Screen commissioning (PC built Nov 2026) |
 | Bunny switched-ground and Donny ARGB allocation and wiring | Full PinUp Popper Baller deployment |
 | A six-panel CSD HD matrix (1,536 pixels): orientation, data snake, paired chaining, power injection | Cosmetic work beyond the backglass blackout |
-| Real toys: AE-23-800 bumpers, FL-11629 flippers, slings, knocker, chimes, shell bells, shaker, blower, VW gear motor, beacons | |
+| Real toys: AE-23-800 bumpers, FL-11629 flippers, slings, knocker, chimes, shell bells, shaker, blower, two VW T3 wiper-motor gear motors, beacons | |
 | Layered coil protection | |
 | ESP32 rail-current monitoring in Home Assistant | |
 | DOF + Dude's Cab + VPX, proven on a laptop | |
@@ -127,7 +127,7 @@ Detail: [01 · Architecture, power and grounding](docs/01-architecture-power-and
 |---|---|---|
 | **Dude's Cab** | Main controller (USB) | Fall-off delay and value, security delay, and logic type per output |
 | **Bunny 1** | 16 PWM switched-ground outputs | 1 flipper L · 2 sling L · 3 flipper R · 4 sling R · 5-7 bumpers middle L/C/R · 8 knocker · 9 shaker · 10 coin R LED · 11 repeating bell · 12 beacons · 13 topper blower · 14 coin L LED · 15 strobes · 16 start LED |
-| **Bunny 2** | 16 PWM switched-ground outputs | 1 shell bell S · 2-4 chimes S/M/L · 5 shell bell L · 6-8 bumpers rear L/C/R · 9 gear motor · 10 gear motor 2 (planned) · 11-16 spare |
+| **Bunny 2** | 16 PWM switched-ground outputs | 1 shell bell S · 2-4 chimes S/M/L · 5 shell bell L · 6-8 bumpers rear L/C/R · 9 gear motor 1 · 10 gear motor 2 · 11-16 spare |
 | **MX Donny** | ARGB data, 8 ports | **6-8: HD matrix** (paired panels). 1-5: left buttons + side + undercab strip, right equivalent, flashers, ARGB fans, speaker rings |
 | **Voltboards × 3** | Fused 5 V distribution | Cab 1: left/right button + side-strip chains. Cab 2: matrix ×2, ARGB fans. Backbox: speaker rings, topper flashers, undercab L/R |
 | **Brain + 4 button boards** | Inputs | Cabinet buttons and tilt on the button boards; undercab buttons and the **coin door interlock (DOOR terminal)** on the Brain |
@@ -191,7 +191,8 @@ Detail: [03 · Lighting and HD matrix](docs/03-lighting-and-hd-matrix.md)
 - **AE-23-800 pop bumpers:** 4.2 Ω, so ≈5.7 A at 24 V; RUEF160 on the positive leg. A stuck coil draws about 6-6.5 A and burns out in roughly 60 s. **Fibre yoke** fitted on the bracket side of the metal yoke (the reverse of the factory order), so the return stroke lands on fibre: there's no yoke-operated scoring switch here, which is the factory's reason for its order ([doc 04](docs/04-mech-toys-and-coil-protection.md#fibre-yoke-orientation-why-this-cabinet-differs-from-the-factory)).
 - **Slings, Data East knocker, three-chime unit, shell bells:** +24 V to one side, Bunny to the other, diode across.
 - **12 V toys:** **Stern Spike shaker kit by PinSound** (through a **7 V step-down**, kept; DOF intensity varies per table), topper blower (a 12 V **truck fan**), beacon pair (straight 12 V; no filter needed), repeating fire-alarm bell, DTG strobes, and a **VW gear motor** (the standard model recommended in the Pinscape guide) on a single PWM port, with a second one planned. DOF sets the intensity in real time, with the Configurator Max Value as the ceiling; an earlier "three ports for H/M/L" approach was superseded. Upper right covers about 80 % of gear tables; middle left is optional for the rest.
-- **La Nettoyeuse** (Arnoz motor/noise filter) on **4** devices: shaker, repeating bell, topper blower and gear motor, with a 5th for gear motor 2. **None on the solenoid coils** (bumpers, slings, flippers, knocker, chimes, shell bells), which use a 1N4007 flyback only.
+- **Gear motors:** two **VW Transporter T3 front wiper motors** (Febi, OE 191955113A / 191955119AX, 12 V; [listing](https://www.ebay.co.uk/itm/336339742479)): gear motor 1 upper right (Bunny 2 port 9), gear motor 2 middle left (port 10), each on one PWM port with DOF intensity and its own La Nettoyeuse.
+- **La Nettoyeuse** (Arnoz motor/noise filter) on **5** devices: shaker, repeating bell, topper blower and both gear motors. **None on the solenoid coils** (bumpers, slings, flippers, knocker, chimes, shell bells), which use a 1N4007 flyback only.
 - **Bumper flash (fitted, [Pop Bumper Part 2 video](https://www.youtube.com/watch?v=C6_70nraSic)):** a bulb and series resistor in parallel at the coil lugs *after* the PTC, so the bulb flashes with each strike and a stuck-coil trip also kills it. ⏳ The replacement bulbs turned out to be **6.3 V AC** types; whether the fitted resistor (already reduced for the previous bulb) suits them is still to check.
 
 ### Protection: four layers
@@ -390,7 +391,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 - [ ] **Night Mode sound fallback:** Night Mode turns the real mech off, but VPX has Flippers and Contactors on DOF only, so there's no sound at all. Switch VPX to Sound/Both when Night Mode is on (e.g. a batch script with IniMod editing `VPinballX.ini`).
 - [ ] Verify the order of **Donny ports 1-5** against the Configurator; add the 12 V port fuse ratings to the points list.
 - [ ] **Custom topper:** 14 additional MX flashers (4 LEDs each) and mounts.
-- [ ] **Gear motor 2** (Bunny 2 port 10, with La Nettoyeuse).
+- [x] **Gear motor 2** fitted (middle left, Bunny 2 port 10, with La Nettoyeuse).
 - [ ] **Second BST-1 bass shaker** on the spare channel of the rear-SSF amp.
 - [ ] **Rail measurements:** flipper at 10 %, long-hold coil temperature, per-rail peaks during multiball, an HA stuck-output alert.
 - [ ] Confirm the **ESP32 pins** (5 V clamp; DS18B20 location) and commit the live YAML.
@@ -447,7 +448,7 @@ Full table, plus the pending tests: [test record](docs/test-record.md).
 | | | |
 |---|---|---|
 | ![Front Voltboards and Donny](images/front-voltboards-and-donny.webp)<br>*Front Voltboards and MX Donny* | ![24 V terminal blocks](images/24v-positive-terminal-blocks.jpg)<br>*24 V positive terminal blocks (25 A)* | ![5 V PSU and ANL fuse](images/5v-psu-60a-fuse.jpg)<br>*5 V PSU and ANL fuse (now 30 A)* |
-| ![Bunny 2 labels](images/bunny-2-port-labels.jpg)<br>*Bunny 2 port labels (coils since changed to 2.5 A SB)* | ![Gear motor](images/gear-motor-bunny2.webp)<br>*VW gear motor (Bunny 2 port 9)* | ![Bumper with RUEF160](images/bumper-ruef160-thermistor.jpg)<br>*AE-23-800 bumper with RUEF160* |
+| ![Bunny 2 labels](images/bunny-2-port-labels.jpg)<br>*Bunny 2 port labels (coils since changed to 2.5 A SB)* | ![Gear motor](images/gear-motor-bunny2.webp)<br>*Gear motor 1, VW T3 wiper motor (Bunny 2 port 9)* | ![Bumper with RUEF160](images/bumper-ruef160-thermistor.jpg)<br>*AE-23-800 bumper with RUEF160* |
 | ![HD matrix underside](images/hd-matrix-underside-wiring.webp)<br>*HD matrix: power injection and paired data* | ![MX fire button](images/mx-fire-button.jpg)<br>*MX fire button* | ![Coin door interlock](images/coin-door-interlock.jpg)<br>*Coin door interlock switch* |
 | ![Topper beacons and blower](images/topper-beacons-blower.webp)<br>*Topper: beacons and blower* | ![Topper blower La Nettoyeuse](images/topper-blower-la-nettoyeuse.jpg)<br>*La Nettoyeuse on the topper blower* | ![Medieval Madness topper](images/topper-medieval-madness.jpg)<br>*Custom Medieval Madness topper* |
 

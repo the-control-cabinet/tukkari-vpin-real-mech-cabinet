@@ -51,8 +51,8 @@
 | 6 | Bumper rear left (AE-23-800) | 24 V | 2.5 A SB | RUEF160 | 1N4007 |
 | 7 | Bumper rear centre (AE-23-800) | 24 V | 2.5 A SB | RUEF160 | 1N4007 |
 | 8 | Bumper rear right (AE-23-800) | 24 V | 2.5 A SB | RUEF160 | 1N4007 |
-| 9 | Gear motor (VW) | 12 V | 5 A SB | | La Nettoyeuse |
-| 10 | Gear motor 2 (planned) | 12 V | 5 A SB | | La Nettoyeuse |
+| 9 | Gear motor 1 (VW T3 wiper motor, upper right) | 12 V | 5 A SB | | La Nettoyeuse |
+| 10 | Gear motor 2 (VW T3 wiper motor, middle left) | 12 V | 5 A SB | | La Nettoyeuse |
 | 11-16 | Spare | | | | |
 
 - The flipper wiring is **+24 V on the right lug, Bunny on the middle lug, hold lug disconnected, diode band on the right lug** (see [04](04-mech-toys-and-coil-protection.md)).
@@ -63,7 +63,7 @@
 *Bunny 2 port labels. The photo shows the original 4 A SB coil fuses; all coil ports are now 2.5 A SB.*
 
 ![Gear motor on Bunny 2](../images/gear-motor-bunny2.webp)
-*VW gear motor, driven from Bunny 2 port 9.*
+*Gear motor 1 (VW T3 wiper motor), driven from Bunny 2 port 9.*
 
 ### Bunny grounds
 Each Bunny has two ground terminals for current sharing, returned with 14 AWG: one to the 24 V PSU and one to the 12 V PSU.

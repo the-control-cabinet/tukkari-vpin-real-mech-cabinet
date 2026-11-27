@@ -64,8 +64,8 @@ Source: DC Power Supply diagram v1.6 and 12V & 24V Connections diagram.
 | Rail | Model | Rating | Notes |
 |------|-------|--------|-------|
 | 5 V | LRS-350-5 | 60 A | ARGB (Voltboards, matrix, strips, fans). **30 A** inline fuse (was 60 A). |
-| 12 V | LRS-350-12 | 29.2 A | Toys, beacons, topper blower, interior LEDs, shaker (via 7 V step-down), etc. **20 A** inline fuse. |
-| 24 V mech | LRS-600-24 | 25 A | Coils, gear motor, chimes, shell bells. Inline fuse. |
+| 12 V | LRS-350-12 | 29.2 A | Toys, gear motors, beacons, topper blower, interior LEDs, shaker (via 7 V step-down), etc. **20 A** inline fuse. |
+| 24 V mech | LRS-600-24 | 25 A | Coils, chimes, shell bells. Inline fuse. |
 | 24 V audio | LRS-350-24 | 14.6 A | Three amps (XY-S220H audio + two XY-S100H SSF). No DC fuse (see the [safety](10-safety.md) notes). |
 
 ### Branch fusing when the wire gets thinner

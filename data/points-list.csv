@@ -23,6 +23,6 @@ Bunny 2,5,Shell bell large (4 in),24 V,2.5 A SB,none yet,1N4007,
 Bunny 2,6,Bumper rear left (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Left
 Bunny 2,7,Bumper rear centre (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Center + 8 Bumper Back
 Bunny 2,8,Bumper rear right (AE-23-800),24 V,2.5 A SB,RUEF160,1N4007,DOF: 10 Bumper Back Right
-Bunny 2,9,Gear motor (VW),12 V,5 A SB,,La Nettoyeuse,
-Bunny 2,10,Gear motor 2 (planned),12 V,5 A SB,,La Nettoyeuse,planned
+Bunny 2,9,Gear motor 1 (VW T3 wiper motor; upper right),12 V,5 A SB,,La Nettoyeuse,
+Bunny 2,10,Gear motor 2 (VW T3 wiper motor; middle left),12 V,5 A SB,,La Nettoyeuse,
 Bunny 2,11-16,Spare,,,,,

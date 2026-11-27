@@ -217,7 +217,7 @@ Additional motors (top-left ~6–9 %, front ~3–6 %) have low ROI for most user
 Medium pitch covers ~85–90 % of tables. Low and High are minorities. Pitch was de-prioritised relative to location.
 
 ### Hardware notes
-Standard VW gear motor (the model recommended in the Pinscape build guide), 12 V, on Bunny 2 port 9 with a **La Nettoyeuse**. Gear motor 2 is planned on Bunny 2 port 10.
+Both gear motors are the **Febi front wiper motor for the VW Transporter T3 (1979-92), OE 191955113A / 191955119AX, 12 V** ([eBay listing](https://www.ebay.co.uk/itm/336339742479)), the VW wiper-motor type recommended in the Pinscape build guide. Gear motor 1 sits **upper right** on Bunny 2 port 9; gear motor 2 sits **middle left** on Bunny 2 port 10. Each has its own **La Nettoyeuse**. Positions on the [interior floor plan](../diagrams/interior-layout-rev-a/02-floor-plan.png) (M9, M10).
 
 See also: [La Nettoyeuse](04-mech-toys-and-coil-protection.md#la-nettoyeuse), [Bunny boards](02-control-boards-and-io.md).
 
@@ -227,11 +227,11 @@ See also: [La Nettoyeuse](04-mech-toys-and-coil-protection.md#la-nettoyeuse), [B
 
 Arnoz La Nettoyeuse is a noise filter for **motor and bell** loads on Bunny outputs.
 
-**Where it's used (4 fitted, 1 planned):**
+**Where it's used (5 fitted):**
 - Shaker (Stern Spike kit by PinSound, Bunny 1 port 9)
 - Repeating fire-alarm bell (Bunny 1 port 11)
 - Topper blower, a 12 V truck fan (Bunny 1 port 13)
-- Gear motor (Bunny 2 port 9), plus gear motor 2 when fitted (port 10)
+- Gear motors 1 and 2 (Bunny 2 ports 9 and 10)
 
 **Not used on the solenoid coils** (bumpers, slings, flippers, knocker, chimes, shell bells). They use a 1N4007 flyback diode only. **Beacons** need neither.
 

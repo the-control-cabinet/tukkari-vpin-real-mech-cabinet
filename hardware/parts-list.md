@@ -45,16 +45,15 @@ Status: **Installed** = fitted in the cabinet · **Planned** = to fit or buy.
 | Item | Qty | Product / link | Notes | Status |
 |---|---|---|---|---|
 | Shaker - Stern Spike shaker kit (PinSound-made) | 1 | [https://retroarcadespecialists.co.uk/all-products/ols/products/ster…](https://retroarcadespecialists.co.uk/all-products/ols/products/stern-spike-shaker-kit) | Via LM2596 buck converter at ~7 V; Bunny 1 port 9; La Nettoyeuse fitted | Installed |
-| Gear motor - standard VW model (as recommended in the Pinscape build guide) | 1 |  | Bunny 2 port 9; La Nettoyeuse fitted | Installed |
-| Gear motor 2 - standard VW model | 1 |  | Bunny 2 port 10; La Nettoyeuse | Planned |
+| Gear motor 1 - Febi front wiper motor for the VW Transporter T3 (1979-92), OE 191955113A / 191955119AX, 12 V (the VW wiper-motor type recommended in the Pinscape build guide) | 1 | [Wiper Motor fits VW TRANSPORTER T3 Front 79 to 92 191955113A 191955119AX Febi](https://www.ebay.co.uk/itm/336339742479) | Upper right; Bunny 2 port 9; La Nettoyeuse fitted | Installed |
+| Gear motor 2 - same model | 1 | [same listing](https://www.ebay.co.uk/itm/336339742479) | Middle left; Bunny 2 port 10; La Nettoyeuse fitted | Installed |
 | Fire alarm (repeating) bell, 4", 12 V | 1 | [4 Inch Metal Fire Control Internal Strike Type Electric Bell, Coppe…](https://www.amazon.co.uk/dp/B0CJG2VKWW?ref=ppx_yo2ov_dt_b_fed_asin_title) | Bunny 1 port 11; La Nettoyeuse fitted | Installed |
 | Beacons - COLORLAM 40W 12/24V (blue + orange) | 2 | [COLORLAM 40W Blue Flashing Beacon Light IP65 Waterproof & Magnetic …](https://www.amazon.co.uk/dp/B0F9Y9QCPM?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) | Bunny 1 port 12 (shared). Straight 12 V, no Nettoyeuse/diode | Installed |
 | 12 V twin cigarette-socket splitter (optional) | 1 | [Range Tour Car Cigarette Lighter Splitter Adapter 2 Sockets, Multi …](https://www.amazon.co.uk/dp/B0B7C3MJKR?ref=ppx_yo2ov_dt_b_fed_asin_title) | Only if not cutting the beacon plugs | Installed |
 | Topper fan - 12 V 6" truck/car fan | 1 | [Alagoo Car Fan 6'' 12V Fan Cool Gadgets Clip Fan for Front Rear Sea…](https://www.amazon.co.uk/dp/B078S9Z6GF?ref=ppx_yo2ov_dt_b_fed_asin_title) | Bunny 1 port 13 (blower); La Nettoyeuse fitted | Installed |
 | Adjustable ball mount for topper fan | 1 | [PLDHPRO Tablet Wall Mount Holder Drill Base, iPad Mouning-Swivel fo…](https://www.amazon.co.uk/dp/B0F1C94ZP3?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1) |  | Installed |
 | DTG strobes (without quick connect) | 2 | [DTG Strob](https://shop.arnoz.com/en/classic-leds/42-dtg-strob.html) | Fit the HD matrix mount; Bunny 1 port 15 | Installed |
-| La Nettoyeuse | 4 | [La Nettoyeuse](https://shop.arnoz.com/en/accessoires/81-la-nettoyeuse.html) | Shaker, repeating bell, topper blower, gear motor. Not used on solenoid coils | Installed |
-| La Nettoyeuse | 1 | [La Nettoyeuse](https://shop.arnoz.com/en/accessoires/81-la-nettoyeuse.html) | For gear motor 2 | Planned |
+| La Nettoyeuse | 5 | [La Nettoyeuse](https://shop.arnoz.com/en/accessoires/81-la-nettoyeuse.html) | Shaker, repeating bell, topper blower, gear motors 1 and 2. Not used on solenoid coils | Installed |
 | Diodes 1N4007 | pack |  | Across every coil, band to +24 V | Installed |
 | RUEF160 resettable PTC (1.6 A hold / 3.2 A trip) | 10 |  | All 10 playfield coils (6 bumpers, 2 slings, 2 flippers) | Installed |
 
